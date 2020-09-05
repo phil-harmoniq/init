@@ -25,13 +25,12 @@ install_programs()
     apt-get update
     # Stupid tzdata prompting during install...
     export DEBIAN_FRONTEND="noninteractive"
-    apt-get install dotnet-sdk-3.1 shellcheck -y --no-install-recommends
+    apt-get install git dotnet-sdk-3.1 shellcheck -y --no-install-recommends
 }
 
 add_bash_aliases()
 {
-    bash_aliases='
-# Define some ANSI colors
+    bash_aliases='# Define some ANSI colors
 ANSI_RESET=$(tput sgr0)
 ANSI_BOLD=$(tput bold)
 ANSI_RED=$(tput setaf 1)
