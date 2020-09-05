@@ -23,7 +23,9 @@ install_programs()
     wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O /tmp/packages-microsoft-prod.deb
     dpkg -i /tmp/packages-microsoft-prod.deb
     apt-get update
-    apt-get install dotnet-sdk-3.1 shellcheck -y
+    # Stupid tzdata prompting during install...
+    export DEBIAN_FRONTEND="noninteractive"
+    apt-get install dotnet-sdk-3.1 shellcheck -y --no-install-recommends
 }
 
 add_bash_aliases()
