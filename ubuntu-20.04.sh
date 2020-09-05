@@ -25,7 +25,7 @@ install_programs()
     apt-get update
     # Stupid tzdata prompting during install...
     export DEBIAN_FRONTEND="noninteractive"
-    apt-get install git dotnet-sdk-3.1 shellcheck -y --no-install-recommends
+    apt-get install git dotnet-sdk-3.1 shellcheck neofetch -y --no-install-recommends
 }
 
 add_bash_aliases()
