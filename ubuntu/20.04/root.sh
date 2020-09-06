@@ -30,7 +30,7 @@ install_programs()
 
 add_bash_aliases()
 {
-    bash_aliases='# Define some ANSI colors
+    echo '# Define some ANSI colors
 ANSI_RESET=$(tput sgr0)
 ANSI_BOLD=$(tput bold)
 ANSI_RED=$(tput setaf 1)
@@ -63,17 +63,13 @@ alias dc-stop="dc down"
 
 # IP aliases
 alias ufw-ban="sudo ufw insert 1 deny from"
-alias open-ports="netstat -plnt"'
-    echo "$bash_aliases" >> /etc/skel/.bash_aliases
-    echo "$bash_aliases" >> "$HOME"/.bash_aliases
+alias open-ports="netstat -plnt"' >> /etc/skel/.bash_aliases
 }
 
 add_inputrc()
 {
-    inputrc='# Ignore-case for bash completion
-set completion-ignore-case on'
-    echo "$inputrc" >> /etc/skel/.inputrc
-    echo "$inputrc" >> "$HOME"/.bash_aliases
+    echo '# Ignore-case for bash completion
+set completion-ignore-case on' >> /etc/skel/.inputrc
 }
 
 main
