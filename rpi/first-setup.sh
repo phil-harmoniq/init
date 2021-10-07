@@ -1,12 +1,9 @@
 #!/usr/bin/env sh
 
 set -e
+lib=https://raw.githubusercontent.com/phil-harmoniq/init/master/lib
 
-if [ "$(id -u)" != 0 ]; then
-    echo "Please run this script with sudo:"
-    echo "sudo $0 $*"
-    exit 1
-fi
+curl -L $lib/require-sudo.sh | sh
 
 apt update
 apt install git -y
