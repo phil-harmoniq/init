@@ -4,9 +4,9 @@ set -e
 base_path=https://raw.githubusercontent.com/phil-harmoniq/init/master
 
 echo "Make sure to audit remote scripts before running them: $base_path/$1"
-read -r "Would you like to continue? (y/n)?" choice
 
 while true; do
+    read -r "Would you like to continue? (y/n)?" choice
     case "$choice" in 
     y|Y )
         exit 0;;
