@@ -1,12 +1,10 @@
 #!/usr/bin/env sh
 
 set -e
+lib=https://raw.githubusercontent.com/phil-harmoniq/init/master/lib
 
-if [ "$(id -u)" != 0 ]; then
-    echo "This script requires "
-    echo "sudo $0 $*"
-    exit 1
-fi
+curl -sSL $lib/require-sudo.sh | sh
+curl -sSL $lib/confirmation.sh | sh
 
 temp_file=/tmp/dotnet.tar.gz
 curl -SL -o $temp_file https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-linux-arm64.tar.gz
