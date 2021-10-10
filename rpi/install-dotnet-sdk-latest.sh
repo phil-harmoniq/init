@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 set -e
-lib=https://raw.githubusercontent.com/phil-harmoniq/init/master/lib
 
-curl -sSL $lib/require-sudo.sh | sh
-curl -sSL $lib/confirmation.sh | sh -s rpi/install-dotnet-sdk-latest.sh
+if [ "$(id -u)" != 0 ]; then
+    echo "This script requires sudo:"
+    exit 1
+fi
 
 temp_file=/tmp/dotnet.tar.gz
 curl -SL -o $temp_file https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-linux-arm64.tar.gz
