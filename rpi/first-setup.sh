@@ -7,5 +7,5 @@ curl -sSL $lib/require-sudo.sh | sh
 curl -sSL $lib/confirmation.sh | sh -s rpi/first-setup.sh
 
 apt update
-apt install git -y
+apt install git tldr cifs-utils -y
 apt upgrade -y
