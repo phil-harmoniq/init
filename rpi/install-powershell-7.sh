@@ -22,4 +22,4 @@ sudo tar zxf /tmp/powershell.tar.gz -C /usr/share/powershell/7
 sudo chmod +x /usr/share/powershell/7/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/share/powershell/7/pwsh /usr/bin/pwsh
+sudo ln -sf /usr/share/powershell/7/pwsh /usr/bin/pwsh
