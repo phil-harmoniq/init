@@ -3,9 +3,16 @@
 set -e
 
 if [ "$(id -u)" != 0 ]; then
-    echo "This script requires sudo:"
+    echo "This script requires sudo/root."
     exit 1
 fi
 
-grep -E '^\s*/dev' /etc/fstab | awk '{ print $2 }' | xargs mkdir -p
+mountpoints="$(grep -E '//NAS' /etc/fstab | awk '{ print $2 }')"
+
+for path in $mountpoints;
+do
+    echo "Creating $path"
+    mkdir -p "$path"
+done
+
 mount -a
