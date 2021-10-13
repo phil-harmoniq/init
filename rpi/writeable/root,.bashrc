@@ -132,7 +132,7 @@ function _update_ps1_custom() {
     if [[ $? == 0 ]]; then
         PS1="\[$CLR_RESET\]\[$CLR_CYAN\][ \[$CLR_BOLD\]\[$USER_COLOR\]\u@\h\[$CLR_RESET\]\[$CLR_GREEN\] \w\[$CLR_CYAN\] ]\[$CLR_RESET\]\\$ "
     else
-        PS1="\[$CLR_RESET\]\[$CLR_RED\][ \[$CLR_BOLD\]\u@\h\[$CLR_RESET\]\[$CLR_GREEN\] \w\[$CLR_RED\] ]\[$CLR_RESET\]\\$ "
+        PS1="\[$CLR_RESET\]\[$CLR_RED\][ \[$CLR_BOLD\]\[$USER_COLOR\]\u@\h\[$CLR_RESET\]\[$CLR_GREEN\] \w\[$CLR_RED\] ]\[$CLR_RESET\]\\$ "
     fi
 }
 PROMPT_COMMAND="_update_ps1_custom; $PROMPT_COMMAND"

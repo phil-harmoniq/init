@@ -1,5 +1,0 @@
-LABEL=writable  /        ext4   defaults        0 0
-LABEL=system-boot       /boot/firmware  vfat    defaults        0       1
-
-//NAS/Compute  /mnt/NAS/Compute  cifs  username=******,password=******,iocharset=utf8,vers=1.0,noperm  0 0
-//NAS/Archive  /mnt/NAS/Archive  cifs  username=******,password=******,iocharset=utf8,vers=1.0,noperm  0 0

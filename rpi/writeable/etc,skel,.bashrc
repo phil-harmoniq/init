@@ -127,7 +127,7 @@ CLR_BLUE=$(tput setaf 4)
 CLR_MAGENTA=$(tput setaf 5)
 CLR_CYAN=$(tput setaf 6)
 CLR_WHITE=$(tput setaf 7)
-USER_COLOR=$CLR_WHITE
+USER_COLOR=$CLR_BLUE
 function _update_ps1_custom() {
     if [[ $? == 0 ]]; then
         PS1="\[$CLR_RESET\]\[$CLR_CYAN\][ \[$CLR_BOLD\]\[$USER_COLOR\]\u@\h\[$CLR_RESET\]\[$CLR_GREEN\] \w\[$CLR_CYAN\] ]\[$CLR_RESET\]\\$ "

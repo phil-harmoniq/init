@@ -10,10 +10,10 @@ network:
             optional: true
     version: 2
     renderer: NetworkManager
-    # wifis:
-    #     wlan0:
-    #         dhcp4: true
-    #         optional: true
-    #         access-points:
-    #             "******":
-    #                 password: "******"
+    wifis:
+        wlan0:
+            dhcp4: true
+            optional: true
+            access-points:
+                "$WIFI_SSID":
+                    password: "$WIFI_PASSWORD"

@@ -59,11 +59,11 @@ mount_image()
     mkdir -p "/tmp/writeable"
 
     echo "Creating partition maps for $IMAGE"
-    kpartx -av "$IMAGE"
+    kpartx -a "$IMAGE"
 
-    echo "Mounting /dev/${boot_device[0]} to /tmp/boot"
+    echo "Mounting /dev/mapper/${boot_device[0]} to /tmp/boot"
     mount "/dev/mapper/${boot_device[0]}" /tmp/boot
-    echo "Mounting /dev/${writeable_device[0]} to /tmp/writeable"
+    echo "Mounting /dev/mapper/${writeable_device[0]} to /tmp/writeable"
     mount "/dev/mapper/${writeable_device[0]}" /tmp/writeable
 }
 
@@ -71,14 +71,14 @@ inject_files()
 {
     for file in "$SCRIPT_DIR"/boot/*; do
         basename=$(basename "$file")
-        new_file=$(echo "$basename" | tr '_' '/')
+        new_file=$(echo "$basename" | tr ',' '/')
         echo "Writing $file to /tmp/boot/$new_file"
         cat "$file" > "/tmp/boot/$new_file"
     done
 
     for file in "$SCRIPT_DIR"/writeable/*; do
         basename=$(basename "$file")
-        new_file=$(echo "$basename" | tr '_' '/')
+        new_file=$(echo "$basename" | tr ',' '/')
         echo "Writing $file to /tmp/writeable/$new_file"
         cat "$file" > "/tmp/writeable/$new_file"
     done
@@ -92,7 +92,7 @@ cleanup()
     umount /tmp/writeable
 
     echo "Removing partition maps for $IMAGE"
-    kpartx -dv "$IMAGE"
+    kpartx -d "$IMAGE"
 
     echo "Removing temporary folder /tmp/boot"
     rm -rf /tmp/boot
