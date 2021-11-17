@@ -9,7 +9,7 @@
           "type": "os",
           "style": "diamond",
           "foreground": "#26C6DA",
-          "background": "#546E7A",
+          "background": "#3d5058",
           "properties": {
             "postfix": " \uE0B1",
             "macos": "mac"
@@ -21,7 +21,7 @@
           "type": "session",
           "style": "powerline",
           "foreground": "#26C6DA",
-          "background": "#546E7A",
+          "background": "#3d5058",
           "powerline_symbol": "\uE0B0"
         },
         {
