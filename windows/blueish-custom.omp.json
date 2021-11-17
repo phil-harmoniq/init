@@ -25,6 +25,16 @@
           "powerline_symbol": "\uE0B0"
         },
         {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#203248",
+          "properties": {
+            "prefix": " \uFCB5 "
+          }
+        },
+        {
           "type": "battery",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
