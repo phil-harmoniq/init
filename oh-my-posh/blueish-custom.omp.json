@@ -79,7 +79,6 @@
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#007800",
-          "leading_diamond": "<transparent, #007800>\uE0B0</>",
           "trailing_diamond": "\uE0b0",
           "properties": {
             "display_exit_code": false,
