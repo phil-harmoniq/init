@@ -35,7 +35,7 @@ install_themes()
 {
     mkdir -p /etc/oh-my-posh/themes
     wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O /tmp/oh-my-posh-themes.zip
-    unzip /tmp/oh-my-posh-themes.zip -d /etc/oh-my-posh/themes -o
+    unzip -o /tmp/oh-my-posh-themes.zip -d /etc/oh-my-posh/themes
     chmod a+rw /etc/oh-my-posh/themes/*.json
     rm /tmp/oh-my-posh-themes.zip
 }

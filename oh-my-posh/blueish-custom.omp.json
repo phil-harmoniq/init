@@ -14,7 +14,7 @@
             "postfix": " \uE0B1",
             "macos": "mac"
           },
-          "leading_diamond": "\uE0c5",
+          "leading_diamond": "\uE0b6",
           "trailing_diamond": "\uE0B0"
         },
         {
@@ -79,7 +79,7 @@
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#007800",
-          "trailing_diamond": "\uE0b0",
+          "trailing_diamond": "\uE0b4",
           "properties": {
             "display_exit_code": false,
             "always_enabled": true,
@@ -107,5 +107,5 @@
       ]
     }
   ],
-  "final_space": true
+  "final_space": false
 }
