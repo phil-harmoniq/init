@@ -19,7 +19,8 @@
             "postfix": " ",
             "macos": "🍏",
             "windows": "🪟",
-            "linux": "🐧"
+            "linux": "🐧",
+            "ubuntu": "🐧"
           }
         },
         {
@@ -29,18 +30,10 @@
           "properties": {
             "display_host": true,
             "prefix": "",
-            "postfix": " ",
+            "postfix": ":",
             "user_info_separator": "@",
-            "display_user": true
-          }
-        },
-        {
-          "type": "shell",
-          "style": "plain",
-          "foreground": "#ffffff",
-          "properties": {
-            "prefix": "",
-            "postfix": " "
+            "display_user": true,
+            "ssh_icon": ""
           }
         },
         {
@@ -52,6 +45,15 @@
             "prefix": "",
             "postfix": " ",
             "style": "full"
+          }
+        },
+        {
+          "type": "shell",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "properties": {
+            "prefix": "",
+            "postfix": " "
           }
         },
         {
@@ -71,10 +73,11 @@
           "type": "root",
           "style": "plain",
           "properties": {
+            "prefix": "",
+            "postfix": " ",
             "root_icon": "⚡"
           },
-          "foreground": "#193549",
-          "background": "#ffff66"
+          "foreground": "#ffff66"
         }
       ]
     },
