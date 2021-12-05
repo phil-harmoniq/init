@@ -34,3 +34,5 @@ install_dotnet()
     curl -L -o /tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
     /tmp/dotnet-install.sh -c 6.0
 }
+
+main
