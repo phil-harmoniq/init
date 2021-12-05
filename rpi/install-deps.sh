@@ -7,6 +7,17 @@ if [ "$(id -u)" != 0 ]; then
     exit 1
 fi
 
+main()
+{
+    install_apt_packages
+    install_powershell
+    install_dotnet
+}
+
+install_apt_packages()
+{
+    apt install docker.io docker-compose tldr screenfetch libraspberrypi-bin -y
+}
 
 install_powershell()
 {
