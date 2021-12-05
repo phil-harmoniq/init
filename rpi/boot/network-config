@@ -18,4 +18,4 @@ wifis:
     optional: true
     access-points:
       $WIFI_SSID:
-        password: "$WIFI_PASSWORD"
+        password: #{WIFI_PASSWORD}#

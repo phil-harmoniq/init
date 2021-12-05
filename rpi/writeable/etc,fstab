@@ -2,4 +2,4 @@ LABEL=writable  /        ext4   defaults        0 0
 LABEL=system-boot       /boot/firmware  vfat    defaults        0       1
 
 # # Network drive
-# $SHARE_FOLDER  $MOUNT_POINT  cifs  username=$USERNAME,password=$PASSWORD,iocharset=utf8,vers=1.0,noperm  0 0
+# #{SHARE_FOLDER}#  #{MOUNT_POINT}#  cifs  username=#{USERNAME}#,password=#{PASSWORD}#,iocharset=utf8,vers=1.0,noperm  0 0

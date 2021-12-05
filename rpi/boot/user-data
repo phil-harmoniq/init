@@ -12,14 +12,14 @@
 
 system_info:
   default_user:
-    name: $USERNAME
+    name: #{USERNAME}#
 
 # On first boot, set the (default) ubuntu user's password to "ubuntu" and
 # expire user passwords
 chpasswd:
   expire: true
   list:
-  - $USERNAME:$PASSWORD
+  - #{USERNAME}#:#{$PASSWORD}#
 
 # Enable password authentication with the SSH daemon
 ssh_pwauth: true
