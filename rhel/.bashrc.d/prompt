@@ -1,5 +1,5 @@
-if [[ -f /usr/local/bin/oh-my-posh ]]; then
-    eval "$(oh-my-posh init bash --config /mnt/c/Users/phhaw/git/init/oh-my-posh/blueish-custom.omp.json)"
+if [[ -f "$HOME/.local/bin/oh-my-posh" ]]; then
+    eval "$(oh-my-posh init bash --config $HOME/.config/oh-my-posh/themes/blueish-custom.omp.json)"
 else
     . /etc/os-release
     OS_NAME="$NAME"
