@@ -4,9 +4,9 @@ SCRIPT_DIR=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 
 main()
 {
-    # add_shell_config
+    add_shell_config
     install_packages
-    # install_posh
+    install_posh
 }
 
 add_shell_config()
@@ -14,12 +14,10 @@ add_shell_config()
     SOURCE_BASH_CONFIG_DIR="$SCRIPT_DIR/.bashrc.d"
     DEST_BASH_CONFIG_DIR="$HOME/.bashrc.d/"
 
-    # echo "$SOURCE_BASH_CONFIG_DIR"
-    # echo "$DEST_BASH_CONFIG_DIR"
-
     mkdir -p "$DEST_BASH_CONFIG_DIR"
     cp "$SOURCE_BASH_CONFIG_DIR/aliases" "$DEST_BASH_CONFIG_DIR"
     cp "$SOURCE_BASH_CONFIG_DIR/prompt" "$DEST_BASH_CONFIG_DIR"
+    cp "$SCRIPT_DIR/.inputrc" "$HOME"
 }
 
 install_packages()
@@ -32,8 +30,6 @@ install_posh()
 {
     SOURCE_THEMES_DIR="$SCRIPT_DIR/../oh-my-posh"
     DEST_THEMES_DIR="$HOME/.config/oh-my-posh/themes"
-
-    # echo "$THEMES_DIR"
 
     curl -s https://ohmyposh.dev/install.sh | bash -s
     mkdir -p "$DEST_THEMES_DIR"
