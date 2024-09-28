@@ -23,7 +23,7 @@ add_shell_config()
 install_packages()
 {
     sudo dnf install epel-release
-    sudo dnf install git htop dotnet-sdk-8.0 shellcheck fastfetch
+    sudo dnf install git htop dotnet-sdk-8.0 shellcheck fastfetch podman podman-compose
 }
 
 install_posh()
@@ -34,6 +34,8 @@ install_posh()
     curl -s https://ohmyposh.dev/install.sh | bash -s
     mkdir -p "$DEST_THEMES_DIR"
     cp "$SOURCE_THEMES_DIR/blueish-custom.omp.json" "$DEST_THEMES_DIR"
+
+    oh-my-posh disable notice
 }
 
 main
