@@ -1,93 +1,107 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "os",
-          "style": "diamond",
-          "foreground": "#26C6DA",
-          "background": "#3d5058",
+          "properties": {
+            "cache_duration": "none",
+            "macos": "mac"
+          },
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b0",
-          // "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} \ue0b1",
           "template": " {{.Icon}} \ue0b1",
-          "properties": {
-            "macos": "mac"
-          }
-        },
-        {
-          "type": "session",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
           "foreground": "#26C6DA",
           "background": "#3d5058",
-          "template": " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}@{{ .HostName }} "
+          "type": "os",
+          "style": "diamond"
         },
         {
-          "type": "shell",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#ffffff",
-          "background": "#203248",
-          "template": " \ufcb5 {{ .Name }} "
-        },
-        {
-          "type": "path",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#193549",
-          "background": "#14c2dd",
-          "template": " \ue5ff {{ .Path }} ",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}@{{ .HostName }} ",
+          "foreground": "#26C6DA",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3d5058",
+          "type": "session",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " \ufcb5 {{ .Name }} ",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "background": "#203248",
+          "type": "shell",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "folder_separator_icon": " \ue0b1 ",
             "style": "full"
-          }
+          },
+          "template": " \ue5ff {{ .Path }} ",
+          "foreground": "#193549",
+          "powerline_symbol": "\ue0b0",
+          "background": "#14c2dd",
+          "type": "path",
+          "style": "powerline"
         },
         {
-          "type": "git",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#193549",
-          "background": "#a2c4e0",
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "properties": {
+            "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_upstream_icon": true
-          }
-        },
-        {
-          "type": "node",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#ffffff",
-          "background": "#6CA35E",
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
-        },
-        {
-          "type": "root",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
+          },
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "foreground": "#193549",
-          "background": "#ffff66",
-          "template": " \uf0e7 "
+          "powerline_symbol": "\ue0b0",
+          "background": "#a2c4e0",
+          "type": "git",
+          "style": "powerline"
         },
         {
-          "type": "exit",
-          "style": "diamond",
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "foreground": "#ffffff",
-          "background": "#007800",
-          "background_templates": [
-            "{{ if gt .Code 0 }}#f1184c{{ end }}"
-          ],
+          "powerline_symbol": "\ue0b0",
+          "background": "#6CA35E",
+          "type": "node",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " \uf0e7 ",
+          "foreground": "#193549",
+          "powerline_symbol": "\ue0b0",
+          "background": "#ffff66",
+          "type": "root",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
           "trailing_diamond": "\ue0b4",
           "template": " \ufc8d{{ if gt .Code 0 }}\uf00d{{ else }}\uf42e{{ end }} ",
-          "properties": {
-            "always_enabled": true
-          }
+          "foreground": "#ffffff",
+          "background": "#007800",
+          "type": "exit",
+          "style": "diamond",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#f1184c{{ end }}"
+          ]
         }
       ]
     },
@@ -96,13 +110,17 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "❯ ",
           "foreground": "#007ACC",
-          "template": "❯ "
+          "type": "text",
+          "style": "plain"
         }
       ],
       "newline": true
     }
-  ]
+  ],
+  "version": 3
 }

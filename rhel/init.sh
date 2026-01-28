@@ -23,7 +23,7 @@ add_shell_config()
 install_packages()
 {
     sudo dnf install epel-release
-    sudo dnf install git htop dotnet-sdk-8.0 shellcheck fastfetch podman podman-compose
+    sudo dnf install git btop shellcheck fastfetch podman
 }
 
 install_posh()
